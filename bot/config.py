@@ -3,21 +3,21 @@ import os
 
 class Config:
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    BOT_TOKEN = os.environ.get("6529631588:AAFo4YfR6JKx0kFZTvpFZooG3JS1g9oYA84")
 
-    SESSION_NAME = os.environ.get("SESSION_NAME", ":memory:")
+    SESSION_NAME = os.environ.get("SESSION_NAME", "utubebot")
 
-    API_ID = int(os.environ.get("API_ID"))
+    API_ID = int(os.environ.get("26847865"))
 
-    API_HASH = os.environ.get("API_HASH")
+    API_HASH = os.environ.get("0ef9fdd3e5f1ed49d4eb918a07b8e5d6")
 
     CLIENT_ID = os.environ.get("CLIENT_ID")
 
     CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
 
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    BOT_OWNER = int(os.environ.get("6789146594"))
 
-    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
+    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "6789146594")
 
     AUTH_USERS = [BOT_OWNER, 374321319] + (
         [int(user.strip()) for user in AUTH_USERS_TEXT.split(",")]
@@ -39,7 +39,7 @@ class Config:
 
     DEBUG = bool(os.environ.get("DEBUG"))
 
-    UPLOAD_MODE = os.environ.get("UPLOAD_MODE") or False
+    UPLOAD_MODE = os.environ.get("UPLOAD_MODE","private") or False
     if UPLOAD_MODE:
         if UPLOAD_MODE.lower() in ["private", "public", "unlisted"]:
             UPLOAD_MODE = UPLOAD_MODE.lower()
